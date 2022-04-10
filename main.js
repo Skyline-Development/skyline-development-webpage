@@ -8,8 +8,8 @@ import * as dat from 'dat.gui'
 // const gui = new dat.GUI()
 const world = {
   plane: {
-    width: 24,
-    height: 24,
+    width: innerWidth,
+    height: innerHeight,
     widthSegments: 25,
     heightSegments: 25
   }
