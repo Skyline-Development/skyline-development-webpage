@@ -8,10 +8,10 @@ import * as dat from 'dat.gui'
 // const gui = new dat.GUI()
 const world = {
   plane: {
-    width: innerWidth,
-    height: innerHeight,
-    widthSegments: 25,
-    heightSegments: 25
+    width: innerWidth / 10,
+    height: innerHeight / 10,
+    widthSegments: innerWidth / 10,
+    heightSegments: innerHeight / 10
   }
 }
 // gui.add(world.plane, 'width', 1, 50).onChange(generatePlane)
@@ -69,7 +69,7 @@ renderer.setPixelRatio(devicePixelRatio)
 document.body.appendChild(renderer.domElement)
 
 // Enable Orbital Controls
-// new OrbitControls(camera, renderer.domElement)
+new OrbitControls(camera, renderer.domElement)
 // -----------------------
 
 camera.position.z = 5
