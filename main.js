@@ -70,17 +70,10 @@ renderer.setPixelRatio(devicePixelRatio)
 document.body.appendChild(renderer.domElement)
 
 
-const boxGeometry = new THREE.BoxGeometry(1, 1, 1, 1, 1, 30);
-const boxMaterial = new THREE.MeshNormalMaterial({
-  wireframe: true
-});
-const boxMesh = new THREE.Mesh(boxGeometry, boxMaterial);
-boxMesh.position.z = 2
-scene.add(boxMesh);
 
 
 // Enable Orbital Controls
-new OrbitControls(camera, renderer.domElement)
+// new OrbitControls(camera, renderer.domElement)
 // -----------------------
 
 camera.position.z = 5
@@ -120,9 +113,6 @@ function animate() {
   renderer.render(scene, camera)
   raycaster.setFromCamera(mouse, camera)
   frame += 0.01
-
-  boxMesh.rotation.x += 0.01
-  boxMesh.rotation.y += 0.01
 
   const {
     array,
