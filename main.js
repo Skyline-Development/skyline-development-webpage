@@ -68,7 +68,7 @@ const renderer = new THREE.WebGLRenderer()
 renderer.setSize(innerWidth, innerHeight)
 renderer.setPixelRatio(devicePixelRatio)
 document.body.appendChild(renderer.domElement)
-
+renderer.setClearColor(0xFFFF00)
 
 
 
@@ -90,6 +90,7 @@ const planeMesh = new THREE.Mesh(planeGeometry, planeMaterial)
 scene.add(planeMesh)
 
 generatePlane()
+
 
 //------------LIGHT------------
 const light = new THREE.DirectionalLight(0xffffff, 1)
